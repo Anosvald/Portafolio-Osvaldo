@@ -2,10 +2,13 @@
 import GitHub from "./Icons/GitHub.astro"
 import NextJS from "./Icons/NextJS.astro"
 import Tailwind from "./Icons/Tailwind.astro"
+import Estilooos from "./Icons/Estilooos.astro"
 import Link from "./Icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import Java from "./Icons/Java.astro"
 import Htmmml from "./Icons/Htmmml.astro"
+import Jjjsss from "./Icons/jjjsss.astro"
+import Cc from "./Icons/cc.astro"
 
 const TAGS = {
   JAVA: {
@@ -18,15 +21,41 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Htmmml,
   },
+  Estilooos: {
+    name: "CSS",
+    class: "bg-black text-white",
+    icon: Estilooos,
+  },
+  Jjjsss: {
+    name: "js",
+    class: "bg-black text-white",
+    icon: Jjjsss,
+  },
+  Cc: {
+    name: "Lenguaje C",
+    class: "bg-[#003159] text-white",
+    icon: Cc,
+  },
 }
 const PROJECTS = [
+  {
+    "title": "Proyecto en espera :D",
+    "description": "Proyecto en espera para la materia de ciberseguridad",
+    "link": "https://anosvald.github.io/Music.github.io/",
+    "github": "https://github.com/Anosvald/Music.github.io.git",
+    "image": "/projects/Artistas.png",
+    "tags": [TAGS.Estilooos, TAGS.HTMMML]
+  },
+  
+  /*
+
   {
     "title": "Plataforma Web para Exploración de Artistas Globales",
     "description": "Desarrollo de una plataforma interactiva para visualizar artistas de renombre mundial. Permite a los usuarios explorar información detallada de diversos cantantes y bandas. Construida desde cero con html y CSS.",
     "link": "https://anosvald.github.io/Music.github.io/",
     "github": "https://github.com/Anosvald/Music.github.io.git",
     "image": "/projects/Artistas.png",
-    "tags": [TAGS.JAVA, TAGS.HTMMML]
+    "tags": [TAGS.Estilooos, TAGS.HTMMML]
   },
   {
     "title": "Sistema de Gestión de Inventarios en Java",
@@ -35,6 +64,47 @@ const PROJECTS = [
     "image": "/projects/Java.png",
     "tags": [TAGS.JAVA, TAGS.HTMMML]
   },
+  {
+    "title": "Sitio web Freelancer",
+    "description": "Sitio web personal para mostrar servicios de programación y desarrollo. Permite explorar proyectos previos y contactar directamente. Desarrollado con HTML5 y CSS3, con diseño responsivo y moderno.",
+    "link": "https://freelancer-diego-osvaldo.netlify.app",
+    "github": "https://github.com/Anosvald/freelancer-diego-osvaldo.git",
+    "image": "/projects/freelancer.png",
+    "tags": [TAGS.Estilooos, TAGS.HTMMML]
+  },
+  {
+    "title": "FrontendStore",
+    "description": "Frontend-Store-Osvaldo es una tienda en línea de camisas con un diseño moderno y fácil de usar. Permite a los usuarios explorar, seleccionar y realizar compras de manera rápida y segura. Desarrollada con HTML5 y CSS3, con una interfaz atractiva y responsiva para una experiencia de compra fluida en todos los dispositivos.",
+    "link": "https://frontend-store-osvaldo.netlify.app",
+    "github": "https://github.com/Anosvald/frontend-store-osvaldo.git",
+    "image": "/projects/FrontendStore.png",
+    "tags": [TAGS.Estilooos, TAGS.HTMMML]
+  },
+  {
+    "title": "BlogCafe",
+    "description": "BlogCafe es un proyecto desarrollado con HTML5, CSS y JavaScript, diseñado para ofrecer una experiencia fluida y atractiva a los amantes del café. La plataforma está totalmente optimizada para dispositivos móviles, tabletas y escritorios, garantizando una navegación rápida y accesible en cualquier plataforma.",
+    "link": "https://blog-cafe-osvaldo.netlify.app",
+    "github": "https://github.com/Anosvald/blog-cafe-osvaldo.git",
+    "image": "/projects/cafe.png",
+    "tags": [TAGS.Estilooos, TAGS.HTMMML, TAGS.Jjjsss]
+  },
+  {
+    "title": "Juego en lenguaje C",
+    "description": "Juego del ahorcado en C con memoria dinámica, que genera archivos .xlsx para registrar partidas y estadísticas. Optimizado para eficiencia y escalabilidad.",
+    "github": "https://github.com/Anosvald/Juego-C.git",
+    "image": "/projects/cproyecto1.png",
+    "tags": [TAGS.Cc]
+  },
+  {
+    "title": "Sistema de Punto de Venta (POS) – Java Desktop",
+    "description": "Software de escritorio diseñado para optimizar la operación de ventas minoristas. Desarrollado con Java Swing/JavaFX, este POS ofrece una interfaz intuitiva y fluida para el registro de transacciones, gestión de productos y reportes de ventas diarios. Se destaca por su eficiencia en el procesamiento de datos y una curva de aprendizaje mínima para el usuario final.",
+    "github": "https://github.com/Anosvald/Punto-Venta.git",
+    "image": "/projects/PuntoVenta_Java.png",
+    "tags": [TAGS.JAVA]
+  },
+
+  */
+
 ]
 ---
 

@@ -2,9 +2,11 @@
 import Layout from "../layouts/layout.astro"
 
 import AboutMe from "../components/AboutMe.astro"
+import Information from "../components/Informacion.astro"
 import Briefcase from "../components/Icons/Briefcase.astro"
 import Certificate from "../components/Icons/Certificate.astro"
 import CodeIcon from "../components/Icons/Code.astro"
+import CodeIcon1 from "../components/Icons/Codee.astro"
 import Experience from "../components/Experience.astro"
 import ProfileCheck from "../components/Icons/ProfileCheck.astro"
 import Projects from "../components/Projects.astro"
@@ -12,11 +14,14 @@ import SectionContainer from "../components/SectionContainer.astro"
 import Hero from "../components/Hero.astro"
 import TitleSection from "../components/TitleSection.astro"
 import Awards from "../components/awards.astro"
+import Bulb from "../components/Icons/bulb.astro"
+import Contacto from '../components/Contacto.astro';
+import Create from '../components/Create.astro';
 ---
 
 <Layout
-  title="Porfolio de Osvaldo - Desarrollador y Programador Web"
-  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+  title="Portafolio de Osvaldo"
+  description="Portafolio profesional de Diego Osvaldo Hernández Fernández, estudiante de Ingeniería en TI enfocado en ciberseguridad, pentesting y respuesta a incidentes."
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
@@ -25,10 +30,29 @@ import Awards from "../components/awards.astro"
       </Hero>
     </SectionContainer>
     <div class="space-y-24">
+
+    <SectionContainer id="information">
+      <TitleSection>
+        <Bulb class="size-7" />
+        Presentación del portafolio
+      </TitleSection>
+      <Information />
+    </SectionContainer>  
+
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+
+    <!--
+
     <SectionContainer id="experiencia">
       <TitleSection>
         <Briefcase class="size-8" />
-        Experiencia laboral
+        Experiencia
       </TitleSection>
       <Experience />
     </SectionContainer>
@@ -41,6 +65,8 @@ import Awards from "../components/awards.astro"
       <Awards />
     </SectionContainer>
 
+    -->
+
     <SectionContainer id="proyectos">
       <TitleSection>
         <CodeIcon class="size-7" />
@@ -49,13 +75,18 @@ import Awards from "../components/awards.astro"
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id="sobre-mi">
+    <SectionContainer id="create">
       <TitleSection>
-        <ProfileCheck class="size-8" />
-        Sobre mí
+        <CodeIcon1 class="size-7" />
+        Información técnica básica
       </TitleSection>
-      <AboutMe />
+      <Create />
     </SectionContainer>
+
+    <SectionContainer id="contacto">
+      <Contacto />
+    </SectionContainer>
+
   </div>
   </main>
 </Layout>

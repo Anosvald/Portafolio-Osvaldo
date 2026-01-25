@@ -2,6 +2,8 @@
 import ThemeToggle from "./ThemeToggle.astro"
 
 const navItems = [
+  /* 
+
   {
     title: "Experiencia",
     label: "experiencia",
@@ -12,15 +14,27 @@ const navItems = [
     label: "certificados",
     url: "/#awards",
   },
+
+  */
+  {
+    title: "Presentación",
+    label: "information",
+    url: "/#information",
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
   {
     title: "Proyectos",
     label: "proyectos",
     url: "/#proyectos",
   },
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
+    title: "Información",
+    label: "create",
+    url: "/#create",
   },
   {
     title: "Contacto",
@@ -72,8 +86,8 @@ const navItems = [
 
     const observer = new IntersectionObserver(callback, {
       root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
+      rootMargin: "-20% 0px -70% 0px", // Crea una "zona de captura" más estrecha
+      threshold: 0, // Se activa en cuanto la sección toca esa zona
     })
 
     sections.forEach((section) => {

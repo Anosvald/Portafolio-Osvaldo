@@ -1,0 +1,96 @@
+---
+// src/components/Contacto.astro
+---
+
+<section id="contacto" class="w-full py-16 relative">
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="flex items-center gap-x-3 mb-8 text-white">
+        <h2 class="text-3xl font-semibold flex items-center gap-x-3">
+          <span class="text-yellow-500">
+            <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </span>
+          Contacto
+        </h2>
+      </div>
+  
+      <form id="contact-form" class="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-md">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-mono text-yellow-500 uppercase mb-2">Nombre</label>
+            <input 
+              type="text" 
+              name="nombre" 
+              required 
+              class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 text-white focus:border-yellow-500 outline-none transition-all placeholder:text-gray-500"
+              placeholder="Tu nombre"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-mono text-yellow-500 uppercase mb-2">Email</label>
+            <input 
+              type="email" 
+              name="email" 
+              required 
+              class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 text-white focus:border-yellow-500 outline-none transition-all placeholder:text-gray-500"
+              placeholder="tu@correo.com"
+            />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-mono text-yellow-500 uppercase mb-2">Mensaje</label>
+          <textarea 
+            name="mensaje" 
+            rows="4" 
+            required 
+            class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 text-white focus:border-yellow-500 outline-none transition-all resize-none placeholder:text-gray-500"
+            placeholder="¿En qué puedo ayudarte?"></textarea>
+        </div>
+  
+        <button 
+          type="submit" 
+          id="submit-btn" 
+          class="w-full md:w-auto px-8 py-3 bg-white/10 border border-white/20 text-white rounded-xl hover:bg-white/20 hover:scale-105 transition-all font-mono text-sm tracking-widest"
+        >
+          ENVIAR_MENSAJE
+        </button>
+      </form>
+  
+      <div id="status-message" class="mt-4 hidden text-center">
+        <p class="font-mono text-sm"></p>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    import { actions } from 'astro:actions';
+  
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const btn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const statusDiv = document.getElementById('status-message');
+    const statusText = statusDiv?.querySelector('p');
+  
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      btn.disabled = true;
+      btn.innerText = 'EJECUTANDO...';
+      
+      const formData = new FormData(form);
+      const { data, error } = await actions.sendContact(formData);
+  
+      if (statusDiv && statusText) {
+        statusDiv.classList.remove('hidden');
+        if (data?.success) {
+          statusText.innerText = "> ACCESO CONCEDIDO: Mensaje enviado.";
+          statusText.className = "text-yellow-200 font-mono";
+          form.reset();
+        } else {
+          statusText.innerText = "> ERROR DE SISTEMA: Reintente.";
+          statusText.className = "text-red-400 font-mono";
+        }
+      }
+      btn.disabled = false;
+      btn.innerText = 'ENVIAR MENSAJE';
+    });
+  </script>

@@ -1,0 +1,47 @@
+---
+const personalImageAlt = "Diego Osvaldo"
+---
+
+<article class="flex flex-col items-center justify-center gap-10">
+  
+  <div class="w-full max-w-3xl grid grid-cols-1 md:grid-cols-2 gap-4 p-8 border rounded-2xl border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl">
+    
+    <div class="space-y-4">
+      <h3 class="text-yellow-500 dark:text-yellow-200 font-bold text-xs uppercase tracking-widest">Tecnologías y Lenguajes</h3>
+      <ul class="text-xs space-y-2 text-gray-300 opacity-90">
+        <li><strong>Astro 5.16.15:</strong> Estructura y generación de contenido dinámico.</li>
+        <li><strong>TypeScript:</strong> Tipado estático para desarrollo robusto.</li>
+        <li><strong>Tailwind CSS:</strong> Diseño responsivo y estética oscura.</li>
+        <li><strong>Zod:</strong> Validación de integridad de datos en formularios.</li>
+      </ul>
+    </div>
+
+    <div class="space-y-4">
+      <h3 class="text-yellow-500 dark:text-yellow-200 font-bold text-xs uppercase tracking-widest">Ciberseguridad e Integración</h3>
+      <ul class="text-xs space-y-2 text-gray-300 opacity-90">
+        <li><strong>Astro Actions:</strong> Manejo seguro de peticiones server-side.</li>
+        <li><strong>Resend API:</strong> Gestión automatizada de correos electrónicos.</li>
+        <li><strong>Variables de Entorno (.env):</strong> Protección de claves de API.</li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-2 pt-4 mt-2 border-t border-white/10">
+      <p class="text-[11px] text-gray-400 opacity-70 italic text-center">
+        <strong>Publicación:</strong> El proyecto será desplegado en <strong>Netlify</strong>. 
+        | <strong>Control de Versiones:</strong> Versión 1.0 estable (Sin versiones anteriores).
+      </p>
+    </div>
+  </div>
+
+  <div class="flex justify-center">
+    <img 
+      width="300" 
+      height="300" 
+      src="/projects/Ciberseguridad.png" 
+      alt={personalImageAlt} 
+      class="object-cover w-64 h-64 p-2 lg:w-80 lg:h-80 aspect-square rounded-3xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)]" 
+      style="object-position: 50% 50%"
+    >
+  </div>
+
+</article>
