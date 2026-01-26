@@ -8,13 +8,19 @@ import LinkButton from "./LinkButton.astro"
 import Java from "./Icons/Java.astro"
 import Htmmml from "./Icons/Htmmml.astro" 
 import Jjjsss from "./Icons/Jjjsss.astro" 
-import Cc from "./Icons/Cc.astro"         
+import Cc from "./Icons/Cc.astro"
+import Seguridad from "./Icons/Seguridad.astro"            
 
 const TAGS = {
   JAVA: {
     name: "Java",
     class: "bg-black text-white",
     icon: Java,
+  },
+  Seguridad: {
+    name: "Ciberseguridad",
+    class: "bg-black text-white",
+    icon: Seguridad,
   },
   HTMMML: {
     name: "HTML",
@@ -38,17 +44,6 @@ const TAGS = {
   },
 }
 const PROJECTS = [
-  {
-    "title": "Proyecto en espera :D",
-    "description": "Proyecto en espera para la materia de ciberseguridad",
-    "link": "https://anosvald.github.io/Music.github.io/",
-    "github": "https://github.com/Anosvald/Music.github.io.git",
-    "image": "/projects/Artistas.png",
-    "tags": [TAGS.Estilooos, TAGS.HTMMML]
-  },
-  
-  /*
-
   {
     "title": "Plataforma Web para Exploración de Artistas Globales",
     "description": "Desarrollo de una plataforma interactiva para visualizar artistas de renombre mundial. Permite a los usuarios explorar información detallada de diversos cantantes y bandas. Construida desde cero con html y CSS.",
@@ -102,9 +97,13 @@ const PROJECTS = [
     "image": "/projects/PuntoVenta_Java.png",
     "tags": [TAGS.JAVA]
   },
-
-  */
-
+  {
+    "title": "Análisis Forense Digital – Mobile Recovery",
+    "description": "Investigación técnica y extracción de evidencia digital de un dispositivo móvil (Motorola RAZR D1) bajo custodia en el centro penitenciario La Pila. El proyecto consistió en la aplicación de metodologías forenses para la recuperación de artefactos del sistema, análisis de registros de comunicación y preservación de la integridad de los datos mediante protocolos de cadena de custodia. Se enfocó en identificar vulnerabilidades de seguridad y patrones de uso del dispositivo.",
+    "github": "https://drive.google.com/file/d/11iieb7_N4WuS2e1E8z2pSYb5VipxyucZ/view?usp=sharing",
+    "image": "/projects/Analisis.png",
+    "tags": [TAGS.Seguridad]
+  },
 ]
 ---
 
